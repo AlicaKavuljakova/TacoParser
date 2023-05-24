@@ -9,12 +9,12 @@ namespace LoggingKata
     {
         readonly ILog logger = new TacoLogger();
         
-        public ITrackable Parse(string line)
+        public ITrackable Parse(string potato)
         {
             logger.LogInfo("Begin parsing");
 
             // Take your line and use line.Split(',') to split it up into an array of strings, separated by the char ','
-            var cells = line.Split(',');
+            var cells = potato.Split(',');
 
             // If your array.Length is less than 3, something went wrong
             if (cells.Length < 3)
@@ -42,9 +42,9 @@ namespace LoggingKata
 
             // Then, you'll need an instance of the TacoBell class
             // With the name and point set correctly
-            var spot = new TacoBell() ;
-            spot.Location=new Point() { Longitude=longitude, Latitude=latitude };   
-spot.Name = name;
+            var spot = new TacoBell();  ;
+             spot.Location=new Point() { Longitude=longitude, Latitude=latitude };   
+             spot.Name = name;
           
             // Then, return the instance of your TacoBell class
             // Since it conforms to ITrackable
